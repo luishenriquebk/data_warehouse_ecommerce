@@ -5,19 +5,30 @@
 Este repositório contém atividades realizadas no MySQL para praticar conceitos de criação de Data Waerehouse no MySQL.
 #### Link do projeto: https://drive.google.com/drive/folders/17Gvu0HAjMDH-WaQdoFAAl-BXPbeGXaPC?usp=sharing
 
-O Data Warehouse criado é uma estrutura de banco de dados projetada para armazenar e gerenciar informações de um fictício e-commerce de maneira otimizada para análise e consulta. Composto por várias entidades inter-relacionadas, o esquema inclui tabelas que abrangem informações cruciais para o negócio.
+Este projeto consiste em um Data Warehouse elaborado para gerenciar informações de um e-commerce fictício. A estrutura foi cuidadosamente projetada visando a otimização para análises e consultas, permitindo uma compreensão aprofundada das operações do negócio.
 
-### Entidades Criadas
+### Entidades Principais
 
-#### CLIENTE - Armazena informações sobre os clientes.
-#### PRODUTO - Contém detalhes sobre os produtos.
-#### PEDIDO  - Registra os pedidos feitos pelos clientes, relacionando clientes e produtos
-#### FUNCIONARIO - Armazena informações sobre os funcionários.
-#### ENVIO   - Registra os detalhes do envio dos produtos, relacionando pedidos e funcionários.
+*   **Cliente**: Armazena informações detalhadas sobre os clientes, incluindo nome e email.
+    
+*   **Produto**: Contém informações específicas sobre os produtos oferecidos, como nome e preço.
+    
+*   **Pedido**: Registra pedidos feitos pelos clientes, conectando clientes e produtos adquiridos.
+    
+*   **Funcionário**: Armazena dados dos funcionários envolvidos no processo, como nome e cargo.
+    
+*   **Envio**: Registra detalhes do envio dos produtos, associando-os aos pedidos e funcionários responsáveis pela entrega.
+    
 
 ### Relacionamentos e Cardinalidades
 
-Clientes ↔ Pedidos (um para muitos)
-Produtos ↔ Pedidos (um para muitos)
-Funcionários ↔ Envios (um para muitos)
-Pedidos ↔ Envios (um para muitos)
+*   **Clientes ↔ Pedidos**: Um cliente pode realizar vários pedidos (um para muitos).
+    
+*   **Produtos ↔ Pedidos**: Um produto pode estar presente em vários pedidos (um para muitos).
+    
+*   **Funcionários ↔ Envios**: Um funcionário pode estar associado a vários envios (um para muitos).
+    
+*   **Pedidos ↔ Envios**: Um pedido pode ter vários registros de envio (um para muitos).
+    
+
+Este esquema permite análises detalhadas sobre o comportamento dos clientes, eficiência logística, desempenho de vendas e muito mais. É uma base sólida para a geração de insights valiosos que impulsionam as estratégias de negócio.
